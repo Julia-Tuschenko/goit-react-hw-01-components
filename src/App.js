@@ -8,12 +8,12 @@ import friends from "./components/friendList/friends.json";
 import TransactionHistory from "./components/transactions/TransactionHistory";
 import transactions from "./components/transactions/transactions.json";
 import Table from "./components/transactions/Table";
-
+import { Container } from "./App.styled";
 const profile = cardProfile;
 
 export default function App() {
   return (
-    <div>
+    <Container>
       <SocialProfileCards
         key={profile.tag}
         username={profile.username}
@@ -33,6 +33,6 @@ export default function App() {
         <TransactionHistory items={transactions} />
       </Table>
       ;
-    </div>
+    </Container>
   );
 }
