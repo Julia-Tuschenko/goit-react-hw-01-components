@@ -19,7 +19,7 @@ export default function SocialProfileCards(props) {
     stats,
   } = props;
   return (
-    <Profile class="profile">
+    <Profile>
       <Description>
         <Avatar src={avatar} alt={username} />
         <Name>{username}</Name>
@@ -27,18 +27,18 @@ export default function SocialProfileCards(props) {
         <TagLocation>{location}</TagLocation>
       </Description>
 
-      <Stats class="stats">
+      <Stats>
         <StatsList>
-          <span class="label">Followers</span>
-          <span class="quantity">{stats.followers}</span>
+          <span>Followers</span>
+          <span>{stats.followers}</span>
         </StatsList>
         <StatsList>
-          <span class="label">Views</span>
-          <span class="quantity">{stats.views}</span>
+          <span>Views</span>
+          <span>{stats.views}</span>
         </StatsList>
         <StatsList>
-          <span class="label">Likes</span>
-          <span class="quantity">{stats.likes}</span>
+          <span>Likes</span>
+          <span>{stats.likes}</span>
         </StatsList>
       </Stats>
     </Profile>

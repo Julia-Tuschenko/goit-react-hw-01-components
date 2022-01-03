@@ -1,4 +1,3 @@
-// import "./App.css";
 import SocialProfileCards from "./components/profile/SocialProfileCards";
 import cardProfile from "./components/profile/usre.json";
 import Section from "./components/statistics/Section";

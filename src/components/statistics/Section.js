@@ -3,7 +3,7 @@ import { SectionContainer, Title } from "./Statistics.styled";
 
 function Section({ title, children }) {
   return (
-    <SectionContainer class="statistics">
+    <SectionContainer>
       {title && <Title>Upload stats</Title>}
       {children}
     </SectionContainer>
