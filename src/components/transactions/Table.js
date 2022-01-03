@@ -1,15 +1,21 @@
+import {
+  TransactionHistory,
+  TableHeader,
+  TableComponents,
+} from "./Transactions.styled";
+
 export default function Table({ children }) {
   return (
-    <table class="transaction-history">
+    <TransactionHistory>
       <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
+        <TableHeader>
+          <TableComponents>Type</TableComponents>
+          <TableComponents>Amount</TableComponents>
+          <TableComponents>Currency</TableComponents>
+        </TableHeader>
       </thead>
 
       <tbody>{children}</tbody>
-    </table>
+    </TransactionHistory>
   );
 }

@@ -1,5 +1,14 @@
 import PropTypes from "prop-types";
 import defaultImage from "../default.png";
+import {
+  Profile,
+  Description,
+  Avatar,
+  Name,
+  TagLocation,
+  Stats,
+  StatsList,
+} from "./SocialProfileCards.styled";
 
 export default function SocialProfileCards(props) {
   const {
@@ -10,29 +19,29 @@ export default function SocialProfileCards(props) {
     stats,
   } = props;
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={avatar} alt={username} class="avatar" />
-        <p class="name">{username}</p>
-        <p class="tag">@{tag}</p>
-        <p class="location">{location}</p>
-      </div>
+    <Profile class="profile">
+      <Description>
+        <Avatar src={avatar} alt={username} />
+        <Name>{username}</Name>
+        <TagLocation>@{tag}</TagLocation>
+        <TagLocation>{location}</TagLocation>
+      </Description>
 
-      <ul class="stats">
-        <li>
+      <Stats class="stats">
+        <StatsList>
           <span class="label">Followers</span>
           <span class="quantity">{stats.followers}</span>
-        </li>
-        <li>
+        </StatsList>
+        <StatsList>
           <span class="label">Views</span>
           <span class="quantity">{stats.views}</span>
-        </li>
-        <li>
+        </StatsList>
+        <StatsList>
           <span class="label">Likes</span>
           <span class="quantity">{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+        </StatsList>
+      </Stats>
+    </Profile>
   );
 }
 

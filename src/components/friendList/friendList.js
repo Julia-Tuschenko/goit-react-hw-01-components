@@ -1,8 +1,9 @@
 import Friend from "./friend";
+import { FriendListUl } from "./Friend.styled";
 
 export default function FriendList({ friends }) {
   return (
-    <ul class="friend-list">
+    <FriendListUl>
       {friends.map((friend) => (
         <Friend
           key={friend.id}
@@ -11,6 +12,6 @@ export default function FriendList({ friends }) {
           name={friend.name}
         />
       ))}
-    </ul>
+    </FriendListUl>
   );
 }

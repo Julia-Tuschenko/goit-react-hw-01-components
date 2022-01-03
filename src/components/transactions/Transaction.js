@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
+import { TableBody, TableBodyComponents } from "./Transactions.styled";
 
 export default function Transaction({ type, amount, currency }) {
   return (
-    <tr>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
+    <TableBody>
+      <TableBodyComponents>{type}</TableBodyComponents>
+      <TableBodyComponents>{amount}</TableBodyComponents>
+      <TableBodyComponents>{currency}</TableBodyComponents>
+    </TableBody>
   );
 }
 

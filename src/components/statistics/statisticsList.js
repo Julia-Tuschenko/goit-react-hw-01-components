@@ -1,8 +1,9 @@
 import Statistics from "./Statistics";
+import { StatList } from "./Statistics.styled";
 
 export default function StatisticsList({ items }) {
   return (
-    <ul class="stat-list">
+    <StatList>
       {items.map((item) => (
         <Statistics
           key={item.id}
@@ -10,6 +11,6 @@ export default function StatisticsList({ items }) {
           percentage={item.percentage}
         />
       ))}
-    </ul>
+    </StatList>
   );
 }
