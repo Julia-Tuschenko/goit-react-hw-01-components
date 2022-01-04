@@ -1,10 +1,11 @@
-import Statistics from "./Statistics";
-import { StatList } from "./Statistics.styled";
+import Statistics from './Statistics';
+import { StatList } from './Statistics.styled';
+import PropTypes from 'prop-types';
 
 export default function StatisticsList({ items }) {
   return (
     <StatList>
-      {items.map((item) => (
+      {items.map(item => (
         <Statistics
           key={item.id}
           label={item.label}
@@ -14,3 +15,7 @@ export default function StatisticsList({ items }) {
     </StatList>
   );
 }
+
+StatisticsList.propTypes = {
+  key: PropTypes.string.isRequired,
+};

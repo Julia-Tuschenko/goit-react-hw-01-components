@@ -1,10 +1,11 @@
-import Friend from "./friend";
-import { FriendListUl } from "./Friend.styled";
+import Friend from './Friend';
+import { FriendListUl } from './Friend.styled';
+import PropTypes from 'prop-types';
 
 export default function FriendList({ friends }) {
   return (
     <FriendListUl>
-      {friends.map((friend) => (
+      {friends.map(friend => (
         <Friend
           key={friend.id}
           isOnline={friend.isOnline}
@@ -15,3 +16,7 @@ export default function FriendList({ friends }) {
     </FriendListUl>
   );
 }
+
+FriendList.propTypes = {
+  key: PropTypes.number.isRequired,
+};
